@@ -24,9 +24,11 @@ Compatible from Windows XP through 10.
 
 ## Build Instructions
 
-Use Visual Studio 2012 or higher
+Use Visual Studio 2012 or higher.
 
 
 ## License
 
-[MIT License](https://github.com/cyfrost/EasyRun/blob/master/LICENSE)
+Copyright (c) 2018 cyfrost.
+
+Licensed under the [MIT License](https://github.com/cyfrost/EasyRun/blob/master/LICENSE).
