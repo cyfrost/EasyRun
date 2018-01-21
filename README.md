@@ -1,11 +1,11 @@
 
 # EasyRun
 
-EasyRun has supercow powers! one-up your productivity using EasyRun shortcuts from your Run dialog box
+EasyRun has supercow powers! one-up your productivity using EasyRun shortcuts from your Run dialog box. 
 
-# Download
+## Download
 
-[Download](https://github.com/cyfrost/EasyRun/releases/latest) the latest release (x86/x64 binary)
+[Download](https://github.com/cyfrost/EasyRun/releases/latest) the latest release (x86/x64 setup)
 
 Compatible from Windows XP through 10
 
