@@ -1,0 +1,195 @@
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.exe
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.edit.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.exe
+D:\Cyrus\My Creations\Development (Updated 21-Apr-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.pdb
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.exe
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csprojResolveAssemblyReference.cache
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.edit.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.exe
+D:\Cyrus\My Creations\Development (Updated 16-May-2017)\Developer\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csprojResolveAssemblyReference.cache
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.exe
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.exe
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.editConfig.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\EasyRun.exe.config
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\CommandLine.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\CommandLine.xml
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Explintegrate.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\bin\Release\Explintegrate.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\EasyRun (Multiple Builds)\Version 1.2 Build 16-May-2017\EasyRun\EasyRun\obj\Release\EasyRun.Credits.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe.config
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\Explintegrate.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.xml
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\Explintegrate.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csprojResolveAssemblyReference.cache
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Credits.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.editConfig.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.CoreCompileInputs.cache
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.exe
+C:\Users\diabl\Desktop\GREEN BUILDS\----DONE\EasyRun (Build 2-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe.config
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.xml
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\Explintegrate.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csprojResolveAssemblyReference.cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Credits.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.editConfig.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.CoreCompileInputs.cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.exe
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 8-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csprojResolveAssemblyReference.cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Credits.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.editConfig.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.CoreCompileInputs.cache
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.exe
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe.config
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.xml
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+C:\Users\diabl\Desktop\Green Builds\EasyRun (Build 16-Oct-2017)\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe.config
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.exe
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\EasyRun.pdb
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\CommandLine.xml
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.pdb
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\Microsoft.Win32.TaskScheduler.xml
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\de\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\es\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\fr\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\it\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\zh-CN\Microsoft.Win32.TaskScheduler.resources.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\bin\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csprojResolveAssemblyReference.cache
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\Interop.IWshRuntimeLibrary.dll
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.ResolveComReference.cache
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.about.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.aliases.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Credits.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.editConfig.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Form1.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.Properties.Resources.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.props.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.UACDelegate.resources
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.GenerateResource.Cache
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.csproj.CoreCompileInputs.cache
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.exe
+D:\Cyrus\Dev\Windows\Sources\EasyRun (Build 17-Oct-2017)\EasyRun\EasyRun\obj\Release\EasyRun.pdb
