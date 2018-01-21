@@ -1,0 +1,5 @@
+c:\users\diabl\documents\visual studio 2017\Projects\Explintegrate\Explintegrate\bin\Debug\Explintegrate.dll
+c:\users\diabl\documents\visual studio 2017\Projects\Explintegrate\Explintegrate\bin\Debug\Explintegrate.pdb
+c:\users\diabl\documents\visual studio 2017\Projects\Explintegrate\Explintegrate\obj\Debug\Explintegrate.csprojResolveAssemblyReference.cache
+c:\users\diabl\documents\visual studio 2017\Projects\Explintegrate\Explintegrate\obj\Debug\Explintegrate.dll
+c:\users\diabl\documents\visual studio 2017\Projects\Explintegrate\Explintegrate\obj\Debug\Explintegrate.pdb
