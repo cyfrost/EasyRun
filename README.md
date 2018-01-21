@@ -10,9 +10,9 @@ EasyRun has supercow powers! one-up your productivity using EasyRun shortcuts fr
 
 ## Download
 
-[Download](https://github.com/cyfrost/EasyRun/releases/latest) the latest release (x86/x64 setup)
+Download the latest release from [here](https://github.com/cyfrost/EasyRun/releases/latest).
 
-Compatible from Windows XP through 10
+Compatible from Windows XP through 10.
 
 
 ## Screencaps
