@@ -6,7 +6,7 @@ EasyRun has supercow powers! one-up your productivity using EasyRun shortcuts fr
 ## Screencaps
 
 ![img](https://i.imgur.com/f3yqTBi.png)
-![img](https://i.imgur.com/DiuqpWr.png)
+![img](https://i.imgur.com/a9eQa43.png)
 
 ## Build
 
