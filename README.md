@@ -1,6 +1,11 @@
 
 # EasyRun
 
+[![build_status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/cyfrost/EasyRun/releases/latest)
+[![GitHub release](https://img.shields.io/badge/latest%20release-v0.1-brightgreen.svg)](https://github.com/cyfrost/EasyRun/releases/latest)
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/cyfrost/easyrun/blob/master/LICENSE)
+[![HitCount](http://hits.dwyl.com/cyfrost/easyrun.svg)](http://hits.dwyl.com/cyfrost/easyrun)
+
 EasyRun has supercow powers! one-up your productivity using EasyRun shortcuts from your Run dialog box. 
 
 ## Download
