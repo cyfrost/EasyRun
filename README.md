@@ -17,7 +17,7 @@ Compatible from Windows XP through 10.
 
 ## Screencaps
 
-![img](https://i.imgur.com/f3yqTBi.png) ![img](https://i.imgur.com/hmKrkpd.png)
+![img](https://i.imgur.com/f3yqTBi.png)          ![img](https://i.imgur.com/hmKrkpd.png)
 
 ![img](https://i.imgur.com/a9eQa43.png)
 
