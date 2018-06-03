@@ -6,7 +6,7 @@
 [![license](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/cyfrost/easyrun/blob/master/LICENSE)
 [![HitCount](http://hits.dwyl.com/cyfrost/easyrun.svg)](http://hits.dwyl.com/cyfrost/easyrun)
 
-EasyRun has supercow powers! one-up your productivity using EasyRun shortcuts from your Run dialog box. 
+EasyRun allows you to create easy-to-remember shortcuts to access documents, media, directories, apps, network shares from the comfort of your Run dialog box in Windows. 
 
 ## Download
 
