@@ -206,6 +206,20 @@ namespace EasyRun.App
             {
                 return;
             }
+
+            // Warn about shadowing when the same name exists in the other scope.
+            string otherScope = Scope == AliasScope.User ? "an all-users" : "a just-me";
+            bool otherExists = _service.Exists(Scope == AliasScope.User ? AliasScope.Machine : AliasScope.User, request.Name);
+            if (otherExists && !(_editing != null && !renamed))
+            {
+                string effect = Scope == AliasScope.User
+                    ? "Your user alias will run instead of it."
+                    : "The existing just-me alias will still run instead of this one.";
+                if (!Ui.Confirm(this, "There is already " + otherScope + " alias named '" + AliasName.StripExe(request.Name) + "'. " + effect + "\n\nContinue?"))
+                {
+                    return;
+                }
+            }
             request.Overwrite = true;
 
             AliasChangeResult result = null;

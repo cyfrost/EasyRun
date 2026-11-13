@@ -17,6 +17,7 @@ namespace EasyRun.App
         private readonly RadioButton _runas;
         private readonly Label _note;
         private readonly Button _ok;
+        private readonly Button _test;
 
         public AddElevatedDialog(AliasService service)
         {
@@ -58,7 +59,8 @@ namespace EasyRun.App
             Ui.AddRow(root, _note);
 
             _ok = Ui.Button("Create", OnCreate);
-            Ui.AddRow(root, Ui.ButtonRow(_ok, Ui.CancelButton(this)));
+            _test = Ui.Button("&Test run", OnTestRun, 110);
+            Ui.AddRow(root, Ui.ButtonRow(_ok, _test, Ui.CancelButton(this)));
 
             Controls.Add(root);
             AcceptButton = _ok;
@@ -109,8 +111,29 @@ namespace EasyRun.App
             Ui.SetNote(_note, err ?? (taskMode
                 ? "You'll be asked for the admin password once; Windows stores it for this task."
                 : "You'll be asked for the admin password each time this alias runs."), err == null ? Ui.Tone.Info : Ui.Tone.Error);
-            _ok.Enabled = _name.TextLength > 0 && _target.TextLength > 0 && _account.TextLength > 0 && err == null;
+            bool ready = _name.TextLength > 0 && _target.TextLength > 0 && _account.TextLength > 0 && err == null;
+            _ok.Enabled = ready;
+            _test.Enabled = _target.TextLength > 0 && _account.TextLength > 0 && (err == null || _name.TextLength == 0);
             Ui.SetShield(_ok, taskMode); // registering a task needs admin
+        }
+
+        private void OnTestRun(object sender, EventArgs e)
+        {
+            string account = _account.Text.Trim();
+            if (!AliasService.LooksLikeFullPath(_target.Text))
+            {
+                Ui.Warn(this, "Enter the program's full path before testing.");
+                return;
+            }
+            using (var prompt = new CredentialDialog())
+            using (AdminCredential cred = prompt.Prompt("Enter the password for " + account + " to test-run this program now.", account))
+            {
+                if (cred == null) return;
+                if (Ui.Guard(this, () => _service.TestLaunchAs(_target.Text.Trim().Trim('"'), _args.Text, null, cred)))
+                {
+                    Ui.Info(this, "Started '" + _target.Text + "' as " + account + ".\n\nIf it launched correctly, the credentials and path are valid.");
+                }
+            }
         }
 
         private void OnCreate(object sender, EventArgs e)
@@ -132,12 +155,18 @@ namespace EasyRun.App
             {
                 return;
             }
+            if (_service.GetShadowedNames().Contains(AliasName.StripExe(request.Name)) &&
+                !Ui.Confirm(this, "An all-users alias named '" + AliasName.StripExe(request.Name) + "' also exists. Your new user alias will run instead of it.\n\nContinue?"))
+            {
+                return;
+            }
 
             AliasChangeResult result = null;
             bool done;
             if (kind == AliasKind.ElevatedTask)
             {
-                using (AdminCredential cred = new CredentialDialog().Prompt(
+                using (var prompt = new CredentialDialog())
+                using (AdminCredential cred = prompt.Prompt(
                     "Enter the password for " + request.RunAsAccount + " to create this elevated task.", request.RunAsAccount))
                 {
                     if (cred == null) return;

@@ -72,6 +72,9 @@ namespace EasyRun.Tests
 
         public bool TaskExists(string taskName) => _tasks.Contains(taskName);
 
+        public IReadOnlyList<ElevatedTaskInfo> ListManagedTasks() =>
+            _tasks.Select(t => new ElevatedTaskInfo { Name = t, State = "Ready", UserId = "DOM\\admin" }).ToList();
+
         public void RemoveTask(string taskName)
         {
             Removed.Add(taskName);
@@ -101,19 +104,37 @@ namespace EasyRun.Tests
             Cancelled ? null : new AdminCredential(_user ?? defaultUserName, (_password ?? "pw").ToCharArray());
     }
 
+    internal sealed class FakeBackupStore : IAliasBackupStore
+    {
+        private readonly List<AliasBackup> _items = new List<AliasBackup>();
+
+        public string Directory => @"C:\fake\backups";
+
+        public void Save(AliasExportItem item) =>
+            _items.Insert(0, new AliasBackup { Id = "b" + _items.Count, TimestampIso = DateTime.UtcNow.ToString("o"), Item = item });
+
+        public IReadOnlyList<AliasBackup> List() => _items.ToList();
+
+        public AliasBackup Load(string id) => _items.FirstOrDefault(b => b.Id == id)
+            ?? throw new EasyRunException(EasyRunError.NotFound, id);
+
+        public int Count => _items.Count;
+    }
+
     internal sealed class TestEnv : IDisposable
     {
         public TestEnv()
         {
             Root = Path.Combine(Path.GetTempPath(), "EasyRunTests-" + Guid.NewGuid().ToString("N"));
             Paths = new EasyRunPaths(Root);
-            Service = new AliasService(Store, Shortcuts, Elevation, Paths, @"C:\Program Files\EasyRun\EasyRun.exe");
+            Service = new AliasService(Store, Shortcuts, Elevation, Paths, @"C:\Program Files\EasyRun\EasyRun.exe", BackupStore);
         }
 
         public string Root { get; }
         public FakeAppPathsStore Store { get; } = new FakeAppPathsStore();
         public FakeShortcutWriter Shortcuts { get; } = new FakeShortcutWriter();
         public FakeElevationService Elevation { get; } = new FakeElevationService();
+        public FakeBackupStore BackupStore { get; } = new FakeBackupStore();
         public EasyRunPaths Paths { get; }
         public AliasService Service { get; }
 

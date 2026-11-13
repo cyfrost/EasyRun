@@ -80,6 +80,57 @@ namespace EasyRun.App
             }
         }
 
+        public System.Collections.Generic.IReadOnlyList<ElevatedTaskInfo> ListManagedTasks()
+        {
+            var result = new System.Collections.Generic.List<ElevatedTaskInfo>();
+            try
+            {
+                using (var ts = new TaskService())
+                {
+                    foreach (Task task in ts.RootFolder.Tasks)
+                    {
+                        if (task.Name == null || !task.Name.StartsWith(AliasService.TaskPrefix, StringComparison.Ordinal)) continue;
+                        string action = null;
+                        try
+                        {
+                            if (task.Definition.Actions.Count > 0 && task.Definition.Actions[0] is ExecAction exec)
+                            {
+                                action = exec.Path + (string.IsNullOrEmpty(exec.Arguments) ? string.Empty : " " + exec.Arguments);
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            // Can't read this task's action (access/permission); leave it blank.
+                        }
+                        result.Add(new ElevatedTaskInfo
+                        {
+                            Name = task.Name,
+                            UserId = SafeUserId(task),
+                            State = task.State.ToString(),
+                            Action = action,
+                        });
+                    }
+                }
+            }
+            catch (Exception ex) when (ex is UnauthorizedAccessException)
+            {
+                // No access to enumerate; return what we have.
+            }
+            return result;
+        }
+
+        private static string SafeUserId(Task task)
+        {
+            try
+            {
+                return task.Definition.Principal.UserId;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public void RemoveTask(string taskName)
         {
             try

@@ -9,12 +9,14 @@ namespace EasyRun.App
     {
         public static AliasService CreateAliasService()
         {
+            var paths = new EasyRunPaths();
             return new AliasService(
                 new RegistryAppPathsStore(),
                 new ShellLinkWriter(),
                 new WindowsElevationService(),
-                new EasyRunPaths(),
-                SelfPath());
+                paths,
+                SelfPath(),
+                new FileAliasBackupStore(paths));
         }
 
         /// <summary>Path to EasyRun.exe (the launcher run-as aliases invoke), resolved next to the running assembly.</summary>

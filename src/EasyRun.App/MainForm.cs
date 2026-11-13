@@ -28,7 +28,9 @@ namespace EasyRun.App
 
             Ui.AddRow(root, BigButton("New &alias…", "A program, folder, or program with arguments", (s, e) => Open(new AddAliasDialog(_service))));
             Ui.AddRow(root, BigButton("New &elevated shortcut…", "Run a program as an admin account", (s, e) => Open(new AddElevatedDialog(_service))));
-            Ui.AddRow(root, BigButton("Alias &Manager…", "See, run, edit and remove all aliases", (s, e) => Open(new AliasManagerForm(_service))));
+            Ui.AddRow(root, BigButton("Alias &Manager…", "See, run, edit, import/export and remove aliases", (s, e) => Open(new AliasManagerForm(_service))));
+            Ui.AddRow(root, BigButton("Elevated &tasks…", "Review and clean up the tasks behind elevated shortcuts", (s, e) => Open(new TasksForm(_service))));
+            Ui.AddRow(root, BigButton("&Backups…", "Restore an alias you changed or deleted", (s, e) => Open(new BackupsForm(_service))));
 
             _integration = BigButton("Explorer integration", string.Empty, (s, e) => ToggleIntegration());
             Ui.AddRow(root, _integration);
@@ -80,8 +82,7 @@ namespace EasyRun.App
         {
             using (dialog)
             {
-                if (dialog is AliasManagerForm) dialog.ShowDialog(this);
-                else dialog.ShowDialog(this);
+                dialog.ShowDialog(this);
             }
         }
 

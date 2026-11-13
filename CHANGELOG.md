@@ -33,6 +33,14 @@ A complete rewrite for Windows 10 and 11. Full analysis of v0.1 in [docs/2026-au
 - Consistent button mnemonics and labels across every window; the add-alias dialog warns when the target doesn't exist.
 - Added `SECURITY.md` documenting the compromised v0.1 signing key and the credential model.
 
+### Later in 1.0.0 (features + hardening)
+- **Backups with restore**: every overwrite or delete of an EasyRun alias is saved first; restore from the new **Backups** window or the Alias Manager (backups never contain passwords).
+- **Elevated tasks view**: lists the scheduled tasks behind elevated shortcuts, flags orphans (no alias points at them), and lets you run or remove them or open Task Scheduler.
+- **Test run**: in the elevated-shortcut dialog, launch the program as the admin account before saving, to confirm the credentials and path.
+- **Duplicate / shadow detection**: the Alias Manager marks a user alias that overrides an all-users one (and the hidden all-users alias), and the create dialogs warn about it.
+- Reworked the Alias Manager layout (create/manage actions on a toolbar) so no button is clipped; fixed credential-dialog disposal and a couple of dead code paths found in review.
+- README rewritten with usage examples, troubleshooting, and how aliases work.
+
 ## [0.1] - 2018-01-22
 
 Initial release.

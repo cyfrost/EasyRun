@@ -32,6 +32,15 @@ namespace EasyRun.App
             MinimumSize = new Size(680, 360);
             KeyPreview = true;
 
+            // Toolbar row: create/manage actions (docked first so it sits at the very top).
+            Button add = Ui.Button("&New alias…", (s, e) => OpenAdd());
+            add.Margin = new Padding(0, 0, 6, 0);
+            Button import = Ui.Button("&Import…", (s, e) => ImportAliases());
+            Button export = Ui.Button("E&xport…", (s, e) => ExportAliases());
+            Button backups = Ui.Button("&Backups…", (s, e) => OpenBackups());
+            var toolbar = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, WrapContents = false, Margin = new Padding(0), Padding = new Padding(0, 0, 0, 6) };
+            toolbar.Controls.AddRange(new Control[] { add, import, export, backups });
+
             var top = new FlowLayoutPanel { Dock = DockStyle.Top, AutoSize = true, WrapContents = false, Margin = new Padding(0) };
             top.Controls.Add(new Label { Text = "&Filter:", AutoSize = true, Margin = new Padding(0, 8, 6, 0) });
             _search = Ui.InputBox(string.Empty, 240);
@@ -54,10 +63,6 @@ namespace EasyRun.App
             _list.Columns.Add("Scope", 80);
             _list.ContextMenuStrip = BuildContextMenu();
 
-            Button add = Ui.Button("&New alias…", (s, e) => OpenAdd());
-            add.Margin = new Padding(0, 0, 6, 0);
-            Button import = Ui.Button("&Import…", (s, e) => ImportAliases());
-            Button export = Ui.Button("E&xport…", (s, e) => ExportAliases());
             _run = Ui.Button("&Run", (s, e) => RunSelected());
             _edit = Ui.Button("&Edit…", (s, e) => EditSelected());
             _openFolder = Ui.Button("&Open folder", (s, e) => OpenFolder());
@@ -68,9 +73,6 @@ namespace EasyRun.App
 
             _status = new Label { AutoSize = true, Anchor = AnchorStyles.Left, Margin = new Padding(0, 8, 0, 0), ForeColor = SystemColors.GrayText };
             var left = new FlowLayoutPanel { AutoSize = true, WrapContents = false, Margin = new Padding(0) };
-            left.Controls.Add(add);
-            left.Controls.Add(import);
-            left.Controls.Add(export);
             left.Controls.Add(_status);
             FlowLayoutPanel right = Ui.ButtonRow(_run, _edit, _openFolder, _remove, refresh, close);
             right.Margin = new Padding(0);
@@ -81,9 +83,11 @@ namespace EasyRun.App
             bottom.Controls.Add(left, 0, 0);
             bottom.Controls.Add(right, 1, 0);
 
+            // Dock order: Fill first, then Top-docked panels bottom-up so the toolbar ends up above the filter.
             Controls.Add(_list);
             Controls.Add(bottom);
             Controls.Add(top);
+            Controls.Add(toolbar);
             CancelButton = close;
             ResumeLayout(false);
             PerformLayout();
@@ -135,16 +139,22 @@ namespace EasyRun.App
                     (r.Name?.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0) ||
                     (r.Target?.IndexOf(q, StringComparison.OrdinalIgnoreCase) >= 0));
 
+            System.Collections.Generic.ISet<string> shadowed = _service.GetShadowedNames();
+
             _list.BeginUpdate();
             _list.Items.Clear();
             foreach (AliasRecord r in shown)
             {
                 string target = r.Target ?? r.LaunchValue;
-                var item = new ListViewItem(r.Name) { Tag = r, ToolTipText = DescribeTooltip(r) };
+                bool isShadow = shadowed.Contains(r.Name);
+                bool hidden = isShadow && r.Scope == AliasScope.Machine; // the user alias wins
+                var item = new ListViewItem(r.Name) { Tag = r, ToolTipText = DescribeTooltip(r, isShadow, hidden) };
                 item.SubItems.Add(r.Kind.DisplayName());
                 item.SubItems.Add(target);
                 item.SubItems.Add(r.Kind.IsElevated() ? (r.RunAsAccount ?? "admin") : string.Empty);
-                item.SubItems.Add(r.Scope == AliasScope.Machine ? "All users" : "Just me");
+                ListViewItem.ListViewSubItem scope = item.SubItems.Add(
+                    (r.Scope == AliasScope.Machine ? "All users" : "Just me") + (hidden ? " (hidden)" : isShadow ? " (overrides)" : string.Empty));
+                if (hidden) scope.ForeColor = Ui.ToneColor(Ui.Tone.Warning);
                 if (!r.ManagedByEasyRun) item.ForeColor = SystemColors.GrayText;
                 _list.Items.Add(item);
             }
@@ -153,11 +163,13 @@ namespace EasyRun.App
             UpdateButtons();
         }
 
-        private static string DescribeTooltip(AliasRecord r)
+        private static string DescribeTooltip(AliasRecord r, bool isShadow, bool hidden)
         {
             string tip = "Type \"" + r.Name + "\" in the Run box (Win+R).\n" + (r.Target ?? r.LaunchValue);
             if (!string.IsNullOrEmpty(r.Arguments)) tip += " " + r.Arguments;
             if (r.Kind.IsElevated()) tip += "\nRuns as " + r.RunAsAccount;
+            if (hidden) tip += "\nHidden: your user alias of the same name runs instead.";
+            else if (isShadow) tip += "\nThis user alias overrides the all-users alias of the same name.";
             if (!r.ManagedByEasyRun) tip += "\n(Not created by EasyRun.)";
             return tip;
         }
@@ -241,6 +253,15 @@ namespace EasyRun.App
             catch (Exception ex)
             {
                 Ui.Error(this, "Couldn't copy to the clipboard: " + ex.Message);
+            }
+        }
+
+        private void OpenBackups()
+        {
+            using (var form = new BackupsForm(_service))
+            {
+                form.ShowDialog(this);
+                if (form.RestoredSomething) Reload();
             }
         }
 

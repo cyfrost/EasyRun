@@ -17,22 +17,29 @@ namespace EasyRun.Core
         private readonly IElevationService _elevation;
         private readonly IEasyRunPaths _paths;
         private readonly string _selfLauncherPath;
+        private readonly IAliasBackupStore _backups;
 
         public AliasService(
             IAppPathsStore store,
             IShortcutWriter shortcuts,
             IElevationService elevation,
             IEasyRunPaths paths,
-            string selfLauncherPath)
+            string selfLauncherPath,
+            IAliasBackupStore backups = null)
         {
             _store = store ?? throw new ArgumentNullException(nameof(store));
             _shortcuts = shortcuts ?? throw new ArgumentNullException(nameof(shortcuts));
             _elevation = elevation ?? throw new ArgumentNullException(nameof(elevation));
             _paths = paths ?? throw new ArgumentNullException(nameof(paths));
             _selfLauncherPath = selfLauncherPath;
+            _backups = backups;
         }
 
         public const string LaunchElevatedSwitch = "--launch-elevated";
+        public const string TaskPrefix = "EasyRun_";
+
+        public IElevationService Elevation => _elevation;
+        public IAliasBackupStore Backups => _backups;
 
         // ---------------------------------------------------------------- reads
 
@@ -80,9 +87,13 @@ namespace EasyRun.Core
                     "An alias named '" + name + "' already exists for " + request.Scope.DisplayName() + ".");
             }
 
-            // If replacing an EasyRun alias, clean up its old backing files/task first.
+            // If replacing an EasyRun alias, back it up and clean up its old backing files/task first.
             AliasRecord previous = Get(request.Scope, name);
-            if (previous != null && previous.ManagedByEasyRun) CleanupBacking(previous);
+            if (previous != null && previous.ManagedByEasyRun)
+            {
+                _backups?.Save(ToExportItem(previous));
+                CleanupBacking(previous);
+            }
 
             _paths.EnsureCreated();
             AliasRecord record = Build(name, request, credential);
@@ -100,7 +111,11 @@ namespace EasyRun.Core
             {
                 return new AliasChangeResult(false, "No alias named '" + AliasName.Display(name) + "' for " + scope.DisplayName() + ".");
             }
-            if (record.ManagedByEasyRun) CleanupBacking(record);
+            if (record.ManagedByEasyRun)
+            {
+                _backups?.Save(ToExportItem(record));
+                CleanupBacking(record);
+            }
             _store.Delete(scope, AliasName.ToKey(name));
             return new AliasChangeResult(true, "Removed alias '" + record.Name + "'.", record);
         }
@@ -129,23 +144,51 @@ namespace EasyRun.Core
         /// <summary>EasyRun-managed aliases as portable items (no secrets).</summary>
         public IReadOnlyList<AliasExportItem> GetExportItems()
         {
-            var items = new List<AliasExportItem>();
-            foreach (AliasRecord r in ListAll())
+            return ListAll().Where(r => r.ManagedByEasyRun).Select(ToExportItem).ToList();
+        }
+
+        internal static AliasExportItem ToExportItem(AliasRecord r) => new AliasExportItem
+        {
+            Name = r.Name,
+            Scope = r.Scope.ToString(),
+            Kind = r.Kind.ToString(),
+            Target = r.Target,
+            Arguments = string.IsNullOrEmpty(r.Arguments) ? null : r.Arguments,
+            WorkingDirectory = string.IsNullOrEmpty(r.WorkingDirectory) ? null : r.WorkingDirectory,
+            RunAsAccount = r.RunAsAccount,
+            Description = string.IsNullOrEmpty(r.Description) ? null : r.Description,
+        };
+
+        /// <summary>
+        /// Names that exist in both scopes. The Run box checks HKCU before HKLM, so the user alias wins and the
+        /// machine one is hidden ("shadowed").
+        /// </summary>
+        public ISet<string> GetShadowedNames()
+        {
+            var user = new HashSet<string>(List(AliasScope.User).Select(r => r.Name), StringComparer.OrdinalIgnoreCase);
+            var machine = new HashSet<string>(List(AliasScope.Machine).Select(r => r.Name), StringComparer.OrdinalIgnoreCase);
+            user.IntersectWith(machine);
+            return user;
+        }
+
+        /// <summary>Launches a program as the given admin account now, for a pre-save test (secondary logon).</summary>
+        public void TestLaunchAs(string target, string arguments, string workingDirectory, AdminCredential credential)
+        {
+            if (credential == null) throw new EasyRunException(EasyRunError.Cancelled, "Cancelled.");
+            _elevation.LaunchAs(target, arguments, workingDirectory, credential);
+        }
+
+        /// <summary>Restores an alias from a backup. Elevated-task backups can't be restored (no stored password).</summary>
+        public AliasChangeResult RestoreBackup(AliasBackup backup, bool overwrite)
+        {
+            if (backup?.Item == null) throw new EasyRunException(EasyRunError.InvalidArgument, "Empty backup.");
+            ImportSummary summary = Import(new[] { backup.Item }, overwrite);
+            if (summary.Created == 1)
             {
-                if (!r.ManagedByEasyRun) continue;
-                items.Add(new AliasExportItem
-                {
-                    Name = r.Name,
-                    Scope = r.Scope.ToString(),
-                    Kind = r.Kind.ToString(),
-                    Target = r.Target,
-                    Arguments = string.IsNullOrEmpty(r.Arguments) ? null : r.Arguments,
-                    WorkingDirectory = string.IsNullOrEmpty(r.WorkingDirectory) ? null : r.WorkingDirectory,
-                    RunAsAccount = r.RunAsAccount,
-                    Description = string.IsNullOrEmpty(r.Description) ? null : r.Description,
-                });
+                return new AliasChangeResult(true, "Restored alias '" + AliasName.StripExe(backup.Item.Name) + "'.");
             }
-            return items;
+            string reason = summary.Skipped.Count > 0 ? summary.Skipped[0] : "could not restore";
+            throw new EasyRunException(EasyRunError.Failed, "Restore failed: " + reason);
         }
 
         /// <summary>
@@ -378,7 +421,7 @@ namespace EasyRun.Core
 
         private string ShortcutPath(string name) => Path.Combine(_paths.AliasesDirectory, AliasName.ToShortcutFileName(name));
 
-        internal static string TaskNameFor(string name) => "EasyRun_" + AliasName.StripExe(name);
+        internal static string TaskNameFor(string name) => TaskPrefix + AliasName.StripExe(name);
 
         private static string ExplorerPath() =>
             Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Windows), "explorer.exe");

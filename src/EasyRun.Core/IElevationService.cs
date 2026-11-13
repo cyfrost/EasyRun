@@ -25,6 +25,9 @@ namespace EasyRun.Core
 
         bool TaskExists(string taskName);
 
+        /// <summary>Every scheduled task EasyRun created (name starts with the EasyRun prefix).</summary>
+        System.Collections.Generic.IReadOnlyList<ElevatedTaskInfo> ListManagedTasks();
+
         void RemoveTask(string taskName);
 
         /// <summary>Triggers an already-registered task (no prompt).</summary>

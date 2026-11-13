@@ -77,7 +77,10 @@ namespace EasyRun.App
                         string alias = PathArg(args);
                         if (alias == null) { Ui.Error(null, "Expected an alias name."); return 2; }
                         AliasScope scope = ParseScope(args);
-                        service.LaunchElevated(scope, alias, new CredentialDialog());
+                        using (var prompt = new CredentialDialog())
+                        {
+                            service.LaunchElevated(scope, alias, prompt);
+                        }
                         return 0;
                     }
 
