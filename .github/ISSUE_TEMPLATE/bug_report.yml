@@ -1,0 +1,45 @@
+name: Bug report
+description: Something in EasyRun doesn't work as expected
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: EasyRun version
+      description: Run `erun version`, or check Settings > Apps.
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Run `winver`.
+      placeholder: "Windows 11 24H2 (26100)"
+    validations:
+      required: true
+  - type: dropdown
+    id: feature
+    attributes:
+      label: Which feature?
+      options:
+        - Alias (program/folder/command)
+        - Elevated shortcut (scheduled task)
+        - Elevated shortcut (run as)
+        - Explorer integration
+        - Installer
+        - Other
+  - type: checkboxes
+    id: account
+    attributes:
+      label: Account
+      options:
+        - label: I am a standard (non-admin) user
+        - label: Elevated shortcuts use a separate admin account

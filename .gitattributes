@@ -1,0 +1,13 @@
+# Normalise line endings in the repository; check out with CRLF (Windows-only project).
+* text=auto eol=crlf
+
+# Scripts that must keep LF
+*.sh text eol=lf
+
+# Binary files
+*.ico binary
+*.png binary
+*.exe binary
+*.dll binary
+*.zip binary
+*.pfx binary
