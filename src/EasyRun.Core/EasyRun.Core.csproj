@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>EasyRun.Core</RootNamespace>
+    <AssemblyName>EasyRun.Core</AssemblyName>
+    <Description>Alias (App Paths) management, shortcut building and elevated-launch logic for EasyRun.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="EasyRun.Tests" />
+  </ItemGroup>
+</Project>
