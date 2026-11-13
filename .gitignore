@@ -1,0 +1,58 @@
+# ---------------------------------------------------------------- build output
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]64/
+artifacts/
+publish/
+app.publish/
+*.binlog
+*.pdb
+
+# The released installer is kept in dist/ on purpose (see dist/README.md); anything else built there is not.
+dist/*
+!dist/README.md
+!dist/SHA256SUMS.txt
+!dist/EasyRun-Setup-*.exe
+
+# ---------------------------------------------------------------- tests and coverage
+[Tt]est[Rr]esults/
+*.trx
+*.coverage
+*.coveragexml
+
+# ---------------------------------------------------------------- NuGet
+packages/
+*.nupkg
+*.snupkg
+
+# ---------------------------------------------------------------- secrets (never commit signing keys)
+*.pfx
+*.snk
+
+# ---------------------------------------------------------------- IDEs and editors
+.vs/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.DotSettings.user
+*.swp
+*~
+
+# ---------------------------------------------------------------- operating system
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# ---------------------------------------------------------------- local tooling
+.tools/
+*.log

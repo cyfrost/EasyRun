@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>EasyRun.Cli</RootNamespace>
+    <AssemblyName>erun</AssemblyName>
+    <AssemblyTitle>EasyRun command-line tool</AssemblyTitle>
+    <Description>Create, list, run and remove EasyRun aliases from the command line.</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>$(AppIcon)</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EasyRun.Core\EasyRun.Core.csproj" />
+    <ProjectReference Include="..\EasyRun.App\EasyRun.App.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="EasyRun.Tests" />
+  </ItemGroup>
+</Project>

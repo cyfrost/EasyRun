@@ -1,52 +1,84 @@
-
 # EasyRun
 
-[![build_status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/cyfrost/EasyRun/releases/latest)
-[![GitHub release](https://img.shields.io/badge/current%20release-v0.1-blue.svg)](https://github.com/cyfrost/EasyRun/releases/latest)
-[![license](https://img.shields.io/badge/license-MIT-orange.svg)](https://github.com/cyfrost/easyrun/blob/master/LICENSE)
-[![HitCount](http://hits.dwyl.com/cyfrost/easyrun.svg)](http://hits.dwyl.com/cyfrost/easyrun)
+[![build](https://github.com/cyfrost/EasyRun/actions/workflows/build.yml/badge.svg)](https://github.com/cyfrost/EasyRun/actions/workflows/build.yml)
+[![license](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE)
 
-EasyRun allows you to create easy-to-remember shortcuts to access documents, media, directories, apps, network shares from the comfort of your Run dialog box in Windows. 
+Create short **aliases** you run from the Windows Run box (<kbd>Win</kbd>+<kbd>R</kbd>) — for programs, folders and commands — plus **elevated shortcuts** that run a program as an admin account.
+
+Works on **Windows 10 and 11**. Needs .NET Framework 4.8 (built into Windows 10 1903+ and 11).
 
 ## Download
 
-Download the latest release from [here](https://github.com/cyfrost/EasyRun/releases/latest).
+Get the installer from [`dist/`](dist/) or the [latest release](https://github.com/cyfrost/EasyRun/releases/latest). It's not code-signed yet, so SmartScreen may warn: choose *More info → Run anyway*.
 
-Compatible from Windows XP through 10.
+- **Just for me** (default): no admin. Installs to `%LOCALAPPDATA%\Programs\EasyRun`; aliases go in your user profile.
+- **All users** (administrators only): `C:\Program Files\EasyRun`.
 
+> Upgrading from EasyRun 0.1 (2018)? Uninstall it first from *Settings → Apps*. It demanded admin and stored everything machine-wide; v1.0 is per-user.
 
-## Screencaps
+## Aliases
 
-![img](https://i.imgur.com/f3yqTBi.png)          ![img](https://i.imgur.com/hmKrkpd.png)
+From the EasyRun window, or the `erun` command:
 
-![img](https://i.imgur.com/a9eQa43.png)
+```text
+erun add <path>              Add a program alias
+    --dir                      the path is a folder (opens in Explorer)
+    --args "<args>"            make it a command with arguments
+    --name <alias>             what you type in Run (default: the file/folder name)
+    --machine                  all users (needs admin);  --force  overwrite
+erun list [--user|--machine]
+erun remove <alias> [--machine]
+erun run <alias>
+erun help
+```
 
+Aliases are stored under **App Paths** (`HKCU` by default), the same mechanism Windows uses for `notepad`, `code`, etc. Programs are registered directly; folders and commands use a small `.lnk` in `%LOCALAPPDATA%\EasyRun\aliases` so no console window flashes.
 
-## Features
+## Elevated shortcuts
 
+Run a program as an admin account from an alias. Pick one of two mechanisms (EasyRun defaults sensibly per target):
 
-### Alias Manager
+| Mechanism | How it runs | Prompt | Best for |
+|---|---|---|---|
+| **Scheduled task** | A Task Scheduler task runs the program as the admin account with the highest privileges; Windows stores the password in LSA. The alias triggers it. | Once, at creation | Tools, scripts, maintenance |
+| **Run as (secondary logon)** | EasyRun starts the program as the admin account in your current desktop session, so its window is visible. | Each run | GUI apps you need to see |
 
-You can keep track (Add, remove, edit, start, and view details) of all the aliases being used by your computer under one-roof using the built-in Alias Manager feature.
+EasyRun **never stores the password itself** — a task hands it to Windows (LSA); run-as asks each time and remembers only the username. Creating a task needs admin (supply the admin account's credentials once); triggering it afterwards does not.
 
-To open the Alias Manager, click on "Manage Aliases" option at the bottom left corner on the EasyRun home screen.
+> This is why EasyRun 0.1's "Trusted UAC" never worked for a standard user: its task ran as *you*, and "highest privileges" can't elevate an account that isn't an administrator. v1.0 runs the program as a *different* account that is an admin. See [docs/2026-audit.md](docs/2026-audit.md).
 
+## Explorer integration (optional)
 
+Right-click a file or folder → **Add as EasyRun alias** (under *Show more options* on Windows 11). Per-user registry verbs; no shell-extension DLL is loaded into Explorer.
 
-### Trusted UAC (TUAC)
+## Safety
 
-Have you ever wanted to ALWAYS run some programs/scripts as administrator (because the UAC prompt is annoying but you can't turn it off entirely [because it's a security feature](https://security.stackexchange.com/questions/601/how-is-uac-a-security-improvement))? EasyRun allows you to create a "Elevated launcher" for the programs you trust don't require UAC confirmation on every launch. It's like User Account Control (UAC) is turned off entirely (except it's not ;)). and the way this works is through simple use of a scheduled task (granted administrative privilege) which is triggered manually to run your program when you need it (via an alias you set-up earlier). I'm always trying to improve this feature to be more stable, efficient, and convenient to use.
+- User aliases need no admin. Only all-users aliases and creating an elevated task do.
+- The alias manager shows every alias (user + machine) and which it created, and removes its own `.lnk` files and tasks cleanly.
+- Nothing runs inside Explorer; nothing is written to HKLM for a per-user install.
 
-To create a Trusted UAC shortcut, select "Add new Trusted UAC shortcut" from the EasyRun > Options menu.
+## Building
 
+Requirements: Visual Studio 2022+ or the .NET SDK, plus [NSIS 3](https://nsis.sourceforge.io/) for the installer. The .NET Framework 4.8 reference assemblies restore from NuGet.
 
- ## Build Instructions
+```powershell
+.\build.ps1                 # build, test, create artifacts\EasyRun-Setup-<version>.exe and a portable zip
+.\build.ps1 -VerifyFormat   # also fail if 'dotnet format' would change anything (what CI runs)
+.\build.ps1 -UpdateDist     # also refresh the installer kept in dist\
+```
 
-Use Visual Studio 2012 or higher.
+| Path | Output | Purpose |
+|---|---|---|
+| `src/EasyRun.Core` | `EasyRun.Core.dll` | Alias engine, App Paths store, shortcut/elevation abstractions |
+| `src/EasyRun.App` | `EasyRun.exe` | GUI, the elevated launcher, Windows implementations |
+| `src/EasyRun.Cli` | `erun.exe` | Command-line tool |
+| `tests/EasyRun.Tests` | | xUnit tests |
+| `installer/` | | NSIS installer |
+| `assets/` | | Icon |
+| `dist/` | `EasyRun-Setup-<version>.exe` | The current installer, kept in the repo |
 
+See [CONTRIBUTING.md](CONTRIBUTING.md) and [CHANGELOG.md](CHANGELOG.md).
 
 ## License
 
-Copyright (c) 2018 cyfrost.
-
-Licensed under the [MIT License](https://github.com/cyfrost/EasyRun/blob/master/LICENSE).
+Copyright (c) 2018-2026 cyfrost. Licensed under the [MIT License](LICENSE).
