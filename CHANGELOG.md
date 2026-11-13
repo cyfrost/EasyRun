@@ -27,6 +27,12 @@ A complete rewrite for Windows 10 and 11. Full analysis of v0.1 in [docs/2026-au
 - Absolute `HintPath`s into another machine's folders (the project couldn't build elsewhere).
 - The `Explintegrate` helper assembly, the TaskScheduler/COM loose-DLL dependencies (now NuGet), committed `bin/obj/.suo`, and XP-era code.
 
+### Later in 1.0.0 (polish)
+- **Export / import aliases** as JSON (`erun export` / `erun import`, and buttons in the Alias Manager). Secrets are never exported.
+- **Edit** an alias in place from the Alias Manager, plus a right-click context menu (run, edit, open folder, copy name/target, delete) and keyboard shortcuts (Delete, Enter, F2, F5).
+- Consistent button mnemonics and labels across every window; the add-alias dialog warns when the target doesn't exist.
+- Added `SECURITY.md` documenting the compromised v0.1 signing key and the credential model.
+
 ## [0.1] - 2018-01-22
 
 Initial release.

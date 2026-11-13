@@ -29,6 +29,8 @@ erun add <path>              Add a program alias
 erun list [--user|--machine]
 erun remove <alias> [--machine]
 erun run <alias>
+erun export <file>           Save your aliases to JSON (no passwords)
+erun import <file> [--force] Recreate aliases from a file
 erun help
 ```
 

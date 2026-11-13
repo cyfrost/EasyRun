@@ -124,6 +124,81 @@ namespace EasyRun.Core
             }
         }
 
+        // ---------------------------------------------------------------- export / import
+
+        /// <summary>EasyRun-managed aliases as portable items (no secrets).</summary>
+        public IReadOnlyList<AliasExportItem> GetExportItems()
+        {
+            var items = new List<AliasExportItem>();
+            foreach (AliasRecord r in ListAll())
+            {
+                if (!r.ManagedByEasyRun) continue;
+                items.Add(new AliasExportItem
+                {
+                    Name = r.Name,
+                    Scope = r.Scope.ToString(),
+                    Kind = r.Kind.ToString(),
+                    Target = r.Target,
+                    Arguments = string.IsNullOrEmpty(r.Arguments) ? null : r.Arguments,
+                    WorkingDirectory = string.IsNullOrEmpty(r.WorkingDirectory) ? null : r.WorkingDirectory,
+                    RunAsAccount = r.RunAsAccount,
+                    Description = string.IsNullOrEmpty(r.Description) ? null : r.Description,
+                });
+            }
+            return items;
+        }
+
+        /// <summary>
+        /// Recreates aliases from exported items. Elevated-task aliases are skipped (they need a password that is
+        /// never exported); run-as and normal aliases are recreated.
+        /// </summary>
+        public ImportSummary Import(IEnumerable<AliasExportItem> items, bool overwrite)
+        {
+            var summary = new ImportSummary();
+            foreach (AliasExportItem item in items)
+            {
+                string label = item.Name ?? "(unnamed)";
+                if (!Enum.TryParse(item.Kind, out AliasKind kind))
+                {
+                    summary.Skipped.Add(label + " — unknown kind '" + item.Kind + "'");
+                    continue;
+                }
+                if (kind == AliasKind.ElevatedTask)
+                {
+                    summary.Skipped.Add(label + " — elevated task: recreate it so you can supply the admin password");
+                    continue;
+                }
+
+                AliasScope scope = AliasScopeExtensions.Parse(item.Scope ?? "User");
+                if (!overwrite && Exists(scope, item.Name))
+                {
+                    summary.Skipped.Add(label + " — already exists");
+                    continue;
+                }
+                try
+                {
+                    Create(new CreateAliasRequest
+                    {
+                        Name = item.Name,
+                        Scope = scope,
+                        Kind = kind,
+                        Target = item.Target,
+                        Arguments = item.Arguments,
+                        WorkingDirectory = item.WorkingDirectory,
+                        RunAsAccount = item.RunAsAccount,
+                        Description = item.Description,
+                        Overwrite = true,
+                    });
+                    summary.Created++;
+                }
+                catch (EasyRunException ex)
+                {
+                    summary.Skipped.Add(label + " — " + ex.Message);
+                }
+            }
+            return summary;
+        }
+
         // ---------------------------------------------------------------- building
 
         private AliasRecord Build(string name, CreateAliasRequest request, AdminCredential credential)

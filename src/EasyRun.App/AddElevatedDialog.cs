@@ -41,7 +41,7 @@ namespace EasyRun.App
             _args = Ui.InputBox(string.Empty);
             Ui.AddRow(root, _args);
 
-            Ui.AddRow(root, Ui.Label("&Admin account to run as (e.g. DOMAIN\\admin):"));
+            Ui.AddRow(root, Ui.Label("Admin acco&unt to run as (e.g. DOMAIN\\admin):"));
             _account = Ui.InputBox(string.Empty);
             Ui.AddRow(root, _account);
 

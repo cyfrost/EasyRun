@@ -41,6 +41,8 @@ namespace EasyRun.Cli
                     case "remove":
                     case "rm": return Remove(rest);
                     case "run": return RunAlias(rest);
+                    case "export": return Export(rest);
+                    case "import": return Import(rest);
                     case "help":
                     case "--help":
                     case "-h":
@@ -132,6 +134,27 @@ namespace EasyRun.Cli
             return ExitOk;
         }
 
+        private int Export(List<string> args)
+        {
+            string file = args.FirstOrDefault(a => !a.StartsWith("--", StringComparison.Ordinal));
+            if (string.IsNullOrWhiteSpace(file)) { _err.WriteLine("erun: export needs a file path."); return ExitUsage; }
+            System.Collections.Generic.IReadOnlyList<AliasExportItem> items = _service.GetExportItems();
+            AliasExport.Save(file, items);
+            _out.WriteLine("Exported " + items.Count + (items.Count == 1 ? " alias to " : " aliases to ") + file);
+            return ExitOk;
+        }
+
+        private int Import(List<string> args)
+        {
+            bool force = Take(args, "--force");
+            string file = args.FirstOrDefault(a => !a.StartsWith("--", StringComparison.Ordinal));
+            if (string.IsNullOrWhiteSpace(file)) { _err.WriteLine("erun: import needs a file path."); return ExitUsage; }
+            if (!File.Exists(file)) { _err.WriteLine("erun: file not found: " + file); return (int)EasyRunError.NotFound; }
+            ImportSummary summary = _service.Import(AliasExport.Load(file), force);
+            _out.WriteLine(summary.Describe());
+            return ExitOk;
+        }
+
         private static bool Take(List<string> args, string flag)
         {
             int i = args.FindIndex(a => string.Equals(a, flag, StringComparison.OrdinalIgnoreCase));
@@ -163,6 +186,8 @@ Usage: erun <command> [arguments]
   list [--user|--machine] List aliases
   remove <alias>        Remove an alias            (--machine)
   run <alias>           Run an alias now
+  export <file>         Save your aliases to a JSON file
+  import <file>         Recreate aliases from a file   (--force to overwrite)
   version | help
 
 Elevated shortcuts are created from the EasyRun window (they need admin or a credential prompt).";

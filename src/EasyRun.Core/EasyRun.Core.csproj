@@ -6,6 +6,9 @@
     <Description>Alias (App Paths) management, shortcut building and elevated-launch logic for EasyRun.</Description>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System.Runtime.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
     <InternalsVisibleTo Include="EasyRun.Tests" />
   </ItemGroup>
 </Project>
